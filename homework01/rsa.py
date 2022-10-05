@@ -57,9 +57,8 @@ def multiplicative_inverse(e: int, phi: int) -> int:
             return g, y - (b // a) * x, x
 
     g_, x_, y_ = ext_gcd(min(e, phi), max(e, phi))
-    if g_ == 1:
-        return x_ % phi
-    pass
+    return x_ % phi
+
 
 
 def generate_keypair(p: int, q: int) -> tp.Tuple[tp.Tuple[int, int], tp.Tuple[int, int]]:
